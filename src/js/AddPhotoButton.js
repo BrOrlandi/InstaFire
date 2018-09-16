@@ -3,7 +3,7 @@ import { Button } from 'semantic-ui-react';
 
 class AddPhotoButton extends Component {
   onClickNewPhoto = () => {
-
+    console.log('add photo button');
   }
 
   render() {

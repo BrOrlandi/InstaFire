@@ -9,6 +9,10 @@ class NavBar extends Component {
     location: PropTypes.object,
   };
 
+  onClickLogout = () => {
+    console.log('Logout');
+  }
+
   handleClickNavigate = path => () => {
     this.props.history.push(path);
   }
@@ -35,7 +39,7 @@ class NavBar extends Component {
           </Menu.Item>
 
           <Menu.Item>
-            <Button inverted>Sair</Button>
+            <Button inverted onClick={this.onClickLogout}>Sair</Button>
           </Menu.Item>
         </Menu.Menu>
       </Menu>
