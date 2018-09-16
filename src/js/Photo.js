@@ -7,6 +7,8 @@ import {
   Segment,
 } from 'semantic-ui-react';
 
+import CommentList from './CommentList';
+
 class Photo extends Component {
   static propTypes = {
     userPicture: PropTypes.string,
@@ -14,6 +16,7 @@ class Photo extends Component {
     imageSrc: PropTypes.string,
     description: PropTypes.string,
     likes: PropTypes.array,
+    comments: PropTypes.array,
     timestamp: PropTypes.number,
   };
 
@@ -29,6 +32,7 @@ class Photo extends Component {
       description,
       likes,
       timestamp,
+      comments,
     } = this.props;
 
     const liked = likes.indexOf('123') > -1;
@@ -51,7 +55,8 @@ class Photo extends Component {
             {liked && <Icon name="heart" size="big" color="red" onClick={this.onClickHeart} />}
             {likes.length}
           </div>
-          <div className="photo__description">{description}</div>
+          <h3 className="photo__description">{description}</h3>
+          <CommentList comments={comments} />
         </div>
       </Segment>
     );

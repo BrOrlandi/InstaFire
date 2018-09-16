@@ -14,14 +14,16 @@ const photosSample = [
     likes: ['123'],
     comments: [
       {
+        userId: '123',
         userPhoto: 'https://picsum.photos/48/48/?random=user0',
         userName: 'João da Silva',
-        message: 'Comentário teste',
+        message: 'Comentário teste 1',
       },
       {
+        userId: '1234',
         userPhoto: 'https://picsum.photos/48/48/?random=user1',
         userName: 'Maria da Silva',
-        message: 'Comentário teste',
+        message: 'Comentário teste 2',
       },
     ],
   },
@@ -36,14 +38,16 @@ const photosSample = [
     likes: [],
     comments: [
       {
+        userId: '123',
         userPhoto: 'https://picsum.photos/48/48/?random=user0',
         userName: 'João da Silva',
-        message: 'Comentário teste',
+        message: 'Comentário teste 3',
       },
       {
+        userId: '1234',
         userPhoto: 'https://picsum.photos/48/48/?random=user1',
         userName: 'Maria da Silva',
-        message: 'Comentário teste',
+        message: 'Comentário teste 4',
       },
     ],
   },
