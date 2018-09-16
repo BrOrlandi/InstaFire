@@ -9,7 +9,7 @@ const CommentItem = ({
   message,
 }) => (
   <Comment>
-    <Comment.Avatar src={userPhoto} />
+    <Comment.Avatar src={userPhoto} className="comment__avatar" />
     <Comment.Content>
       <Comment.Author as="a" href={`#/${userId}`}>{userName}</Comment.Author>
       <Comment.Text>{message}</Comment.Text>

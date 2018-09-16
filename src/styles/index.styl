@@ -15,14 +15,14 @@
   }
 
   .photo__date {
-    color: grey;
-    font-weight: normal;
-    text-align: right;
     flex: 1;
+    color: grey;
+    text-align: right;
+    font-weight: normal;
   }
 
   .photo__likes {
-    margin-top: 0.5em;
+    margin-top: .5em;
     font-weight: bold;
     user-select: none;
 
@@ -38,14 +38,14 @@
   }
 
   @media only screen and (max-width: 425px) {
-    padding-left: 0;
     padding-right: 0;
-    border-left: 0;
+    padding-left: 0;
     border-right: 0;
+    border-left: 0;
 
     .photo__header, .photo__footer {
-      padding-left: 1em;
       padding-right: 1em;
+      padding-left: 1em;
     }
 
   }
@@ -66,4 +66,29 @@
   position: fixed;
   right: 1em;
   bottom: 1em;
+}
+
+.ui.comments .comment .comment__avatar {
+  img {
+    border-radius: 50%;
+  }
+}
+
+.ui.form {
+  margin-top: 1em;
+
+  .fields {
+    display: flex;
+    margin-bottom: 0;
+
+    .comment__input {
+      flex: 1;
+    }
+
+    .comment__button {
+      button {
+        width: 60px;
+      }
+    }
+  }
 }

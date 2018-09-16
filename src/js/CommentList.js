@@ -6,18 +6,23 @@ import CommentItem from './CommentItem';
 
 class CommentList extends Component {
   onSubmitComment = (e) => {
-    console.log(e.target.comment.value);
+    const commentText = e.target.comment.value;
+    if (!commentText) {
+      return;
+    }
+
+    console.log(commentText);
   }
 
   render() {
-    const { comments } = this.props; // TODO icon
+    const { comments } = this.props;
     return (
       <Comment.Group>
         {comments.map(comment => (<CommentItem {...comment} />))}
         <Form onSubmit={this.onSubmitComment}>
           <Form.Group>
-            <Form.Input placeholder="Comment..." name="comment" />
-            <Form.Button content="Comentar" />
+            <Form.Input placeholder="Comment..." name="comment" className="comment__input" />
+            <Form.Button icon="comment outline" className="comment__button" />
           </Form.Group>
         </Form>
       </Comment.Group>
