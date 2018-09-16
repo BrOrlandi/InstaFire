@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { Button, Menu, Icon } from 'semantic-ui-react';
 
+import firebase from './firebase';
+
 class NavBar extends Component {
   static propTypes = {
     history: PropTypes.object,
@@ -10,7 +12,7 @@ class NavBar extends Component {
   };
 
   onClickLogout = () => {
-    console.log('Logout');
+    firebase.auth().signOut();
   }
 
   handleClickNavigate = path => () => {
