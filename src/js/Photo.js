@@ -15,9 +15,8 @@ class Photo extends Component {
     userName: PropTypes.string,
     imageSrc: PropTypes.string,
     description: PropTypes.string,
-    likes: PropTypes.array,
-    comments: PropTypes.array,
     timestamp: PropTypes.number,
+    photoKey: PropTypes.string,
   };
 
   onClickHeart = () => {
@@ -26,15 +25,15 @@ class Photo extends Component {
 
   render() {
     const {
+      photoKey,
       userPicture,
       userName,
       imageSrc,
       description,
-      likes,
       timestamp,
-      comments,
     } = this.props;
 
+    const likes = [];
     const liked = likes.indexOf('123') > -1;
 
     const dateString = (new Date(timestamp)).toLocaleString();
@@ -56,7 +55,7 @@ class Photo extends Component {
             {likes.length}
           </div>
           <h3 className="photo__description">{description}</h3>
-          <CommentList comments={comments} />
+          {/* <CommentList photoKey={photoKey} /> */}
         </div>
       </Segment>
     );
