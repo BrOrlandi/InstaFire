@@ -69,8 +69,8 @@ class FeedPage extends Component {
   render() {
     const { photos } = this.state;
     return (
-      <div className="feedPage">
-        <div className="feedContainer">
+      <div className="feed-page">
+        <div className="feed-page__feed">
           {photos.map(photo => (<Photo {...photo} />))}
         </div>
       </div>

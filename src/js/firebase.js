@@ -2,6 +2,7 @@ import Rebase from 're-base';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
+import 'firebase/storage';
 
 import config from './config';
 

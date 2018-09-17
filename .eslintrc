@@ -21,21 +21,8 @@
   },
   "extends": "airbnb",
   "globals": {
-    "describe": true,
-    "it": true,
-    "expect": true,
     "window": true,
     "document": true,
-    "navigator": true,
-    "fetch": true,
-    "FormData": true,
-    "localStorage": true,
-    "beforeAll": true,
-    "beforeEach": true,
-    "jest": true,
-    "afterAll": true,
-    "afterEach": true,
-    "File": true,
-    "Event": true
+    "FileReader": true
   }
 }

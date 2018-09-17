@@ -51,22 +51,16 @@
   }
 }
 
-.feedPage {
+.feed-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 60px;
 
-  .feedContainer {
+  .feed-page__feed {
     max-width: 500px;
     width: 100%;
   }
-}
-
-.ui.button.addPhotoButton {
-  position: fixed;
-  right: 1em;
-  bottom: 1em;
 }
 
 .ui.comments .comment .comment__avatar {
@@ -86,6 +80,10 @@
       flex: 1;
     }
 
+    .description__input {
+      flex: 1;
+    }
+
     .comment__button {
       button {
         width: 60px;
@@ -96,4 +94,23 @@
 
 #app, .login-page {
   height: 100%;
+}
+
+input[type="file"] {
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.add-photo__button {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+}
+
+.add-photo__preview {
+  .image {
+    max-width: 500px;
+    max-height:  500px;
+  }
 }

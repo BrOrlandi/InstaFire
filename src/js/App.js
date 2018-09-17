@@ -5,7 +5,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './NavBar';
 import FeedPage from './FeedPage';
 import ProfilePage from './ProfilePage';
-import AddPhotoButton from './AddPhotoButton';
+import AddPhoto from './AddPhoto';
 import LoginPage from './LoginPage';
 
 const App = ({ user }) => {
@@ -21,7 +21,7 @@ const App = ({ user }) => {
           <Route exact path="/" component={FeedPage} />
           <Route exact path="/profile" component={ProfilePage} />
         </Switch>
-        <AddPhotoButton />
+        <AddPhoto />
       </Fragment>
     </Router>
   );
