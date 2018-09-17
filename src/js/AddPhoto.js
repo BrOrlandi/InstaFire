@@ -80,6 +80,12 @@ class AddPhoto extends Component {
     window.scrollTo(0, 0);
   }
 
+  onCloseModal = () => {
+    this.setState({
+      modalOpen: false,
+    });
+  }
+
   render() {
     const { modalOpen, photoData, submiting } = this.state;
 
@@ -102,9 +108,10 @@ class AddPhoto extends Component {
           <Modal.Content className="add-photo__preview">
             <Image src={photoData} centered />
             <Form onSubmit={this.onSubmitPhoto}>
-              <Form.Group>
-                <Form.Input placeholder="Description..." name="description" className="description__input" />
-                <Form.Button primary content="Enviar foto" className="description__button" />
+              <Form.Input placeholder="Description..." name="description" className="description__input" />
+              <Form.Group className="add-photo__buttons">
+                <Form.Button primary content="Enviar foto" />
+                <Button type="button" content="Cancelar" onClick={this.onCloseModal} />
               </Form.Group>
             </Form>
             <Dimmer inverted active={submiting}>
