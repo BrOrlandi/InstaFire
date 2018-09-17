@@ -43,10 +43,11 @@ class FeedPage extends Component {
 
   render() {
     const { photos } = this.state;
+    const reversePhotos = photos.reverse();
     return (
       <div className="feed-page">
         <div className="feed-page__feed">
-          {photos.map(photo => (<Photo {...photo} photoKey={photo.key} />))}
+          {reversePhotos.map(photo => (<Photo {...photo} photoKey={photo.key} />))}
         </div>
       </div>
     );

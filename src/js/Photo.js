@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Header,
@@ -6,6 +6,7 @@ import {
   Segment,
 } from 'semantic-ui-react';
 
+import defaultUserImage from '../assets/default-user-image.png';
 // import CommentList from './CommentList';
 import Likes from './Likes';
 
@@ -22,7 +23,7 @@ const Photo = ({
   return (
     <Segment className="photo">
       <Header as="h4" className="photo__header">
-        <Image src={userPicture} avatar />
+        <Image src={userPicture || defaultUserImage} avatar />
         <span className="photo__header">
           <span>{userName}</span>
         </span>
