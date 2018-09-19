@@ -7,7 +7,7 @@ import {
 } from 'semantic-ui-react';
 
 import defaultUserImage from '../assets/default-user-image.png';
-// import CommentList from './CommentList';
+import CommentList from './CommentList';
 import Likes from './Likes';
 
 const Photo = ({
@@ -33,7 +33,7 @@ const Photo = ({
       <div className="photo__footer">
         <Likes photoKey={photoKey} />
         <h3 className="photo__description">{description}</h3>
-        {/* <CommentList photoKey={photoKey} /> */}
+        <CommentList photoKey={photoKey} />
       </div>
     </Segment>
   );
