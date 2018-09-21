@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Comment } from 'semantic-ui-react';
 
+import defaultUserImage from '../assets/default-user-image.png';
+
 const CommentItem = ({
   userPhoto,
   userName,
   message,
 }) => (
   <Comment>
-    <Comment.Avatar src={userPhoto} className="comment__avatar" />
+    <Comment.Avatar src={userPhoto || defaultUserImage} className="comment__avatar" />
     <Comment.Content>
       <Comment.Author>{userName}</Comment.Author>
       <Comment.Text>{message}</Comment.Text>
