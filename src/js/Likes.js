@@ -20,14 +20,16 @@ class Likes extends Component {
 
   onClickHeart = () => {
     const { likes } = this.state;
-    const { photoKey } = this.props;
     const userId = firebase.auth().currentUser.uid;
 
     const index = likes.indexOf(userId);
     const liked = index > -1;
 
     if (!liked) {
-      rebase.push(`/photos/${photoKey}/likes`, { data: userId });
+      const newLikes = likes.concat(userId);
+      this.setState({
+        likes: newLikes,
+      });
       return;
     }
 
